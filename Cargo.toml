@@ -7,6 +7,9 @@ edition = "2018"
 [dependencies]
 bevy = { git = "https://github.com/bevyengine/bevy", rev = "7a511394ac6c4f90b5398ab6333f1bd4fd665613" }
 
+[build-dependencies]
+embed-resource = "1.6.1"
+
 # NOTE: For maximum performance, build using a nightly compiler
 # If you are using rust stable, remove the "-Zshare-generics=y" below (as well as "-Csplit-debuginfo=unpacked" when building on macOS).
 

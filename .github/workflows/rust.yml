@@ -8,11 +8,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [windows-latest, macos-latest]
         include:
-          - os: ubuntu-latest
-            artifact_name: urban-telegram
-            release_name: urban-telegram-linux-amd64
           - os: windows-latest
             artifact_name: urban-telegram.exe
             release_name: urban-telegram-windows-amd64.exe

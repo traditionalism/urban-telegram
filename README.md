@@ -12,11 +12,12 @@ cargo install cargo-make
 ```
 cargo make run
 ```
+
 ### LLD-Linking
 urban-telegram deploys LLD Linker to expedite the compilation process. To get rid of LLD-Linking delete `.cargo/config.toml`
 See: [Bevy Fast-Compiles](https://bevyengine.org/learn/book/getting-started/setup/#enable-fast-compiles-optional)
 
-### Credits
+## Credits And Other Notes
 * [bevy](https://github.com/bevyengine/bevy)
 
 ### License

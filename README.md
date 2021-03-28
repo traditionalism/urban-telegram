@@ -18,6 +18,8 @@ urban-telegram deploys LLD Linker to expedite the compilation process. To get ri
 See: [Bevy Fast-Compiles](https://bevyengine.org/learn/book/getting-started/setup/#enable-fast-compiles-optional)
 
 ## Credits And Other Notes
+
+### Credit(s)
 * [bevy](https://github.com/bevyengine/bevy)
 
 ### License

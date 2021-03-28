@@ -1,0 +1,24 @@
+[env]
+ENV_DIR = {source="${CARGO_MAKE_PROFILE}", default_value = "debug", mapping = {release = "release"}}
+CARGO_TARGET_DIR = {value = "target", condition = {env_not_set = ["CARGO_TARGET_DIR"]}}
+CARGO_PROFILE = "dev"
+TARGET_DIR = "target"
+CARGO_MANIFEST_DIR = "${CARGO_MAKE_WORKING_DIRECTORY}"
+
+[env.release]
+CARGO_RELEASE_ARGS = "--release"
+
+[tasks.show-env]
+command = "env"
+
+[tasks.build-native]
+args = ["build", "--features", "native", "@@split(CARGO_RELEASE_ARGS, )"]
+command = "cargo"
+
+[tasks.run]
+command = "${CARGO_TARGET_DIR}/${ENV_DIR}/${CARGO_MAKE_BINARY_EXECUTABLE_NAME}"
+dependencies = ["build-native"]
+watch = true
+
+[tasks.test]
+disabled = true

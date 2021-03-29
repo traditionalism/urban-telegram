@@ -5,7 +5,6 @@ use bevy::DefaultPlugins;
 
 fn main() {
     App::build()
-        .insert_resource(Msaa { samples: 4 })
         .insert_resource(WindowDescriptor {
             title: "urban-telegram".to_string(),
             width: 1920.,
@@ -14,7 +13,8 @@ fn main() {
             resizable: false,
             ..Default::default()
         })
-        .add_system(exit_on_esc_system.system())
+        .insert_resource(Msaa { samples: 4 })
         .add_plugins(DefaultPlugins)
+        .add_system(exit_on_esc_system.system())
         .run();
 }

@@ -16,7 +16,6 @@ jobs:
           - os: macos-latest
             artifact_name: urban-telegram
             release_name: urban-telegram-macos-amd64
-
     steps:
       - uses: actions/checkout@v2
       - name: Remove .cargo/config.toml
@@ -25,16 +24,16 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ~/.cargo
-          key: ${{ matrix.os }}-stable-cargo-v1
+          key: ${{ matrix.os }}-nightly-cargo-v1
           restore-keys: |
-            ${{ matrix.os }}-stable-cargo-v1
+            ${{ matrix.os }}-nightly-cargo-v1
       - name: Setup toolchain
         uses: actions-rs/toolchain@v1
         with:
-          toolchain: stable
+          toolchain: nightly
           target: ${{ matrix.target }}
           override: true
-      - uses: actions-rs/install@v0.1
+      - uses: actions-rs/install@v1
         with:
           crate: cargo-make
           version: latest

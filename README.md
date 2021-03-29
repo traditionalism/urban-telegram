@@ -8,7 +8,7 @@ Sorry! I'm lazy and have none.
 ```
 cargo install cargo-make
 ```
-### Building Native Release 
+### Building Native
 ```
 cargo make run
 ```

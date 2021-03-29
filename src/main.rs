@@ -25,12 +25,17 @@ fn main() {
         .run();
 }
 
-fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
-    commands.spawn_scene(asset_server.load("models/sheen/SheenChair.gltf#Scene0"));
-    commands.spawn_bundle(PerspectiveCameraBundle {
-        transform: Transform::from_xyz(0.9, 0.9, 1.0).looking_at(Vec3::new(0.0, 0.3, 0.0), Vec3::Y),
+fn setup(mut commands: Commands, asset_server: Res<AssetServer>, mut meshes: ResMut<Assets<Mesh>>, mut materials: ResMut<Assets<StandardMaterial>>) {
+    let mut camera = OrthographicCameraBundle::new_3d();
+    camera.orthographic_projection.scale = 2.0;
+    camera.transform = Transform::from_xyz(1.0, 1.0, 3.0).looking_at(Vec3::ZERO, Vec3::Y);
+    commands.spawn_bundle(camera);
+    commands.spawn_bundle(PbrBundle {
+        mesh: meshes.add(Mesh::from(shape::Plane { size: 5.0 })),
+        material: materials.add(Color::rgb(0.3, 0.5, 0.3).into()),
         ..Default::default()
     });
+    commands.spawn_scene(asset_server.load("models/sheen/SheenChair.gltf#Scene0"));
     commands
         .spawn_bundle(LightBundle {
             transform: Transform::from_xyz(3.0, 5.0, 3.0),

@@ -21,6 +21,7 @@ See: [Bevy Fast-Compiles](https://bevyengine.org/learn/book/getting-started/setu
 
 ### Credit(s)
 * [bevy](https://github.com/bevyengine/bevy)
+* [Khronos-Group](https://www.khronos.org/gltf/)
 
 ### License
 * [WTFPL](https://choosealicense.com/licenses/wtfpl/)

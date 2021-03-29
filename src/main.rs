@@ -1,6 +1,6 @@
 #![windows_subsystem = "windows"]
 
-use bevy::prelude::*;
+use bevy::{input::system::exit_on_esc_system, prelude::*};
 use bevy::DefaultPlugins;
 
 fn main() {
@@ -14,6 +14,7 @@ fn main() {
             resizable: false,
             ..Default::default()
         })
+        .add_system(exit_on_esc_system.system())
         .add_plugins(DefaultPlugins)
         .run();
 }

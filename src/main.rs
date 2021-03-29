@@ -6,9 +6,11 @@ use bevy::DefaultPlugins;
 fn main() {
     App::build()
         .insert_resource(WindowDescriptor {
+            title: "urban-telegram".to_string(),
             width: 1920.,
             height: 1080.,
-            title: "urban-telegram".to_string(),
+            vsync: true,
+            resizable: false,
             ..Default::default()
         })
         .add_plugins(DefaultPlugins)

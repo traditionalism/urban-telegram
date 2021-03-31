@@ -37,7 +37,7 @@ jobs:
         with:
           crate: cargo-make
           version: latest
-          use-tool-cache: true
+          use-tool-cache: false
       - name: Build release
         uses: actions-rs/cargo@v1.0.1
         with:

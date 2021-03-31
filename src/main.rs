@@ -1,4 +1,4 @@
-#![windows_subsystem = "windows"]
+#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use bevy::{pbr::AmbientLight, input::system::exit_on_esc_system, prelude::*};
 use bevy::DefaultPlugins;

@@ -5,6 +5,8 @@ My second little 'project' within the rust-lang now using bevy-engine!
 Sorry! I'm lazy and have none.
 
 ## Rudiments
+**Due to the defaulted use of LLD-Linking this program requires you to running the nightly rust toolchain, see the LLD-Linking section to remove it.**
+
 ```
 cargo install cargo-make
 ```

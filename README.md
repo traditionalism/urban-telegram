@@ -26,7 +26,7 @@ See: [Bevy Fast-Compiles](https://bevyengine.org/learn/book/getting-started/setu
 * [Khronos-Group](https://www.khronos.org/gltf/)
 
 ### License
-* [WTFPL](https://choosealicense.com/licenses/wtfpl/)
+* [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
 
 ### Closing Notes
 **Made with 💝 by traditionalism**
